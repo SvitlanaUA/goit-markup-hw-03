@@ -51,17 +51,27 @@ img{
 
 .container {
   width: 1200px;
-  margin: 0 auto;
+ 
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-.hidden{
-  visibility: hidden;
-  pointer-events: none;
+
+
+.visually-hidden {
   position: absolute;
-}
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;}
+
 /* logo style*/
 
 .logo-web{
@@ -74,7 +84,7 @@ img{
 .footer-logo, 
 .footer-logo-web{
 
-  font-family: Raleway; sans-serif;
+  font-family: Raleway sans-serif;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
@@ -84,8 +94,7 @@ img{
 
 .header {
   display: block;
-  padding-top: 32px;
-  border-bottom: 2px solid #F5F4FA;
+  border: 1px solid rgba(236, 236, 236, 1);
 
   color: var(--primary-text-color);
 
@@ -116,6 +125,10 @@ img{
 .header-link {
  color: var(--second-text-color);
 }
+.item{
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 
 .link:hover,.header-link:hover,.link.current:hover,
 .link:focus, .header-link:focus,.link.current:focus {
@@ -128,13 +141,13 @@ img{
 }
 
 .header-contact .item + .item{
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .link, .link-current{
   display: block;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* main*/
@@ -145,12 +158,15 @@ img{
 
 .main{
   background-color: var(--accent-bg-color);
-  padding: 200px 0 280px 0;
+  padding: 200px 0 200px 0;
   text-align: center;
 }
 
 .main-title{
   color: var(--second-bg-color);
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -160,10 +176,13 @@ img{
 
 .main-button {
   margin-top: 30px;
-  
+  min-width: 216px;
+  border-radius: 4px solid #2196F3;
+  padding: 10px 32px 10px 32px;
+
   background-color: var(--active-bg-color);
   color: var(--second-bg-color);
- 
+  padding: 10px 0px 10px 0px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -206,7 +225,9 @@ img{
   }
 
   /*work section*/
-
+.work{
+  padding-top: 0;
+}
   .work-list{
     display: flex;
     margin-left: auto;
@@ -234,9 +255,6 @@ img{
 .team{
   background-color: var(--second-bg-color);
 }
-.team-title{
-  margin-top: 50px;
-}
 
 .team-list{
   display: flex;
@@ -253,7 +271,8 @@ img{
   margin-left: 30px;
 }
 .team-block{
-  padding: 30px 60px 30px 60px;
+  padding: 30px 0 30px 0;
+
 }
 .team-heroes{
   font-weight: 500;
@@ -262,7 +281,8 @@ img{
 }
 
 .team-description {
-  padding-top: 10px;
+  margin-top: 10px;
+
   color: var(--second-text-color);
   font-size: 16px;
   line-height: 1.18;
@@ -274,12 +294,12 @@ img{
 
 .footer {
   padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--accent-bg-color);
 }
 
 .footer-list{
-  padding-top: 20px;
-  padding-bottom: 60px;
+  margin-top: 20px;
 }
 
 .footer-list, .link-adress{
@@ -288,10 +308,13 @@ img{
   line-height: 1.18;
   text-decoration: none;
 }
-.footer-item{
-  padding-bottom: 9px;
-}
 
+.footer-item
+{margin-bottom: 9px;
+}
+.footer-item:last-child{
+  margin-bottom: 0;
+}
 .link-contacts{
    color: rgba(255, 255, 255, 0.6)
 }
@@ -308,7 +331,7 @@ color: var(--accent-text-color);
 
 .portfolio-list{
   justify-content: center;
-  margin-top: 30px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -322,7 +345,7 @@ color: var(--accent-text-color);
 .projects-block {
   padding: 20px 24px;
 
-  border: 2px solid #F5F4FA;
+  border: 1px solid rgba(236, 236, 236, 1)
   
 }
 
@@ -334,9 +357,7 @@ color: var(--accent-text-color);
   margin-bottom: 0;
 }
 
-.portfolio-filter{
-  padding-bottom: 16px;
-}
+
 
 .portfolio-list 
 .portfolio-filter+.portfolio-filter{
@@ -349,11 +370,15 @@ color: var(--accent-text-color);
   color: var(--buttoms-text-color--);
 }
 .button{
+  display:inline-block;
   border-radius: 4px;
+  padding: 6px 22px 6px 22px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid #F5F4FA;
+
   background-color: var(--buttoms-bg-color--);
   color: var(--primary-text-color);
+  
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -361,7 +386,7 @@ color: var(--accent-text-color);
   text-align: center; 
 }
 .projects-titel{
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   color: var(--primary-text-color);
   font-size: 18px;
   line-height: 2;
