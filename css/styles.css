@@ -125,10 +125,6 @@ img{
 .header-link {
  color: var(--second-text-color);
 }
-.item{
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
 
 .link:hover,.header-link:hover,.link.current:hover,
 .link:focus, .header-link:focus,.link.current:focus {
